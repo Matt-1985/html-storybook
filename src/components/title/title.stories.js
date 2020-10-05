@@ -1,6 +1,6 @@
 import "./title.css";
 import title from "./title.html";
 
-export default { title: "Components/Avatar" };
+export default { title: "Components/Title" };
 
-export const dog = () => title;
+export const logo = () => title;
