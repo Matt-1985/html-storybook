@@ -1,0 +1,20 @@
+.btn {
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  background: transparent linear-gradient(180deg, #ed8770, #d9519d);
+  align-items: center;
+  display: flex;
+}
+
+.btn-text {
+  font: "Circular" sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+}
+
+.btn-logo {
+  height: 1.5rem;
+  margin-right: 1rem;
+}

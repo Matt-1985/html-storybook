@@ -1,0 +1,25 @@
+.share {
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: white;
+  border: solid 1px;
+  background: transparent;
+  align-items: center;
+  display: flex;
+}
+
+.share-text {
+  font: "Circular" sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+}
+
+.share-logo {
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+html {
+  background: #383b49;
+  color: white;
+}
