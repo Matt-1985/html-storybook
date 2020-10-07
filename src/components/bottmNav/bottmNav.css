@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: grey;
+  box-shadow: -5px -5px 10px black;
+}
+
+.icon {
+  text-align: center;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
