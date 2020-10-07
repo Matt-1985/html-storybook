@@ -1,0 +1,14 @@
+li {
+  list-style: none;
+  background-color: ##10121d;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  align-items: left;
+  display: flex;
+  top: 234px;
+  left: 20px;
+  width: 287px;
+  height: 41px;
+  padding: 10px;
+}
