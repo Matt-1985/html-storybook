@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("./assets/fonts/circular-std.css");
+
+:root {
+  --main-font-color: white;
+  --secondary-bg-color: #181b2c;
+  --primary-bg-color: #383b49;
+  --font-family: "Circular Std", sans-serif;
+}
 
 *,
 *::after,
@@ -8,12 +15,12 @@
 
 html {
   font-size: 16px;
-  background-color: #383b49;
-  color: white;
+  background-color: var(--secondary-bg-color);
+  color: var(--main-font-color);
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--font-family);
   margin: 0;
 }
 
@@ -23,5 +30,6 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Circular Std", sans-serif;
+  font-weight: 500;
 }

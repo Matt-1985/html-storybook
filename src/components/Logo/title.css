@@ -2,6 +2,8 @@
   border-radius: 50%;
   height: 100px;
   width: 100px;
+  font-family: "Circular Std", sans-serif;
+  font-weight: 500;
 }
 
 .title > h1 {
