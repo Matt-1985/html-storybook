@@ -1,0 +1,10 @@
+.title {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.title > h1 {
+  text-align: center;
+  margin: 0px;
+}
