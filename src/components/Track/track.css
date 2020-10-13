@@ -2,21 +2,40 @@
   display: grid;
   align-items: center;
   grid-template: auto / auto 1fr auto;
-  border: 1px solid white;
   width: 500px;
 }
 
+/* .track > :not(:last-child) { 
+  margin-right: 20px;
+}*/
+
 .track__image {
   height: 46px;
-}
-
-.text__box {
-  text-align: left;
-  margin-left: 20px;
+  width: 46px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ffffff57;
+  margin-right: 20px;
 }
 
 .text__box > * {
   margin: 0;
+}
+
+.text__box {
+  height: 100%;
+  padding-top: 5px;
+  border-bottom: 1px solid grey;
+}
+
+.text__box > h3 {
+  font-size: 0.8125rem;
+  color: lightgrey;
+}
+
+.text__box > p {
+  font-size: 0.625rem;
+  color: gray;
 }
 
 .action__btn {
@@ -24,6 +43,7 @@
   border: none;
   height: 100%;
   padding: auto 0;
+  border-bottom: 1px solid grey;
 }
 
 .title__elm {

@@ -1,23 +1,21 @@
 import "./track.css";
 import playActionSrc from "../../assets/play-action.svg";
-import imgElementSrc from "../../assets/michael2.png";
-import { doc } from "prettier";
 
-export function createTrackElement(title, artist) {
+export function createTrackElement(track) {
   const trackElement = document.createElement("div");
   trackElement.className = "track";
 
   const titleElement = document.createElement("h3");
-  titleElement.innerText = title;
+  titleElement.innerText = track.title;
   titleElement.className = "title__elm";
 
   const artistElement = document.createElement("p");
-  artistElement.innerText = artist;
+  artistElement.innerText = track.artist;
   artistElement.className = "artist__elm";
 
   const imgElement = document.createElement("img");
-  imgElement.src = imgElementSrc;
-  imgElement.alt = `Image of ${artist}`;
+  imgElement.src = track.imgSrc;
+  imgElement.alt = `Image of ${track.artist}`;
   imgElement.className = "track__image";
 
   const buttonElement = document.createElement("button");
@@ -33,8 +31,9 @@ export function createTrackElement(title, artist) {
   textBox.append(titleElement, artistElement);
   trackElement.append(imgElement, textBox, buttonElement);
 
+  const audioElement = new Audio(track.audioSrc);
   buttonElement.onclick = function () {
-    alert("Click!");
+    audioElement.play();
   };
 
   return trackElement;
