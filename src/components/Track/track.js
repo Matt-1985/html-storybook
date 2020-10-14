@@ -14,10 +14,18 @@ export function createTrackElement(track) {
   artistElement.innerText = track.artist;
   artistElement.className = "artist__elm";
 
-  const imgElement = document.createElement("img");
-  imgElement.src = track.imgSrc;
-  imgElement.alt = `Image of ${track.artist}`;
-  imgElement.className = "track__image";
+  const createImgElement = () => {
+    const imgElement = document.createElement("img");
+    imgElement.src = track.imgSrc;
+    imgElement.alt = `Image of ${track.artist}`;
+    imgElement.className = "track__image";
+    return imgElement;
+  };
+
+  // const imgElement = document.createElement("img");
+  // imgElement.src = track.imgSrc;
+  // imgElement.alt = `Image of ${track.artist}`;
+  // imgElement.className = "track__image";
 
   const buttonElement = document.createElement("button");
   buttonElement.className = "action__btn";
@@ -30,7 +38,7 @@ export function createTrackElement(track) {
   textBox.className = "text__box";
 
   textBox.append(titleElement, artistElement);
-  trackElement.append(imgElement, textBox, buttonElement);
+  trackElement.append(createImgElement(), textBox, buttonElement);
 
   const audioElement = new Audio(track.audioSrc);
 
@@ -39,12 +47,10 @@ export function createTrackElement(track) {
   buttonElement.onclick = function () {
     if (isPlaying) {
       audioElement.pause();
-      playActionElement.src = playActionSrc;
-      playActionElement.alt = "Play Button";
+      showPlayBtn(playActionElement);
     } else {
       audioElement.play();
-      playActionElement.src = pauseActionSrc;
-      playActionElement.alt = "Pause Button";
+      showPauseBtn(playActionElement);
     }
 
     isPlaying = !isPlaying;
@@ -52,3 +58,14 @@ export function createTrackElement(track) {
 
   return trackElement;
 }
+
+// Funktionen
+const showPlayBtn = (element) => {
+  element.src = playActionSrc;
+  element.alt = "Play Button";
+};
+
+const showPauseBtn = (element) => {
+  element.src = pauseActionSrc;
+  element.alt = "Pause Button";
+};
