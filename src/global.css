@@ -7,6 +7,40 @@
   --font-family: "Circular Std", sans-serif;
 }
 
+@font-face {
+  font-family: "Circular Std Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Circular Std Medium"),
+    url("./assets/fonts/CircularStd-Medium.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./assets/fonts/CircularStd-Medium.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Circular Std Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Circular Std Bold"),
+    url("./assets/fonts/CircularStd-Bold.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./assets/fonts/CircularStd-Bold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Circular Std Book";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Circular Std Book"),
+    url("./assets/fonts/CircularStd-Book.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./assets/fonts/CircularStd-Book.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --main-bg-color: #181b2c;
+  --main-font-color: #ffffff57;
+  --main-font-size: 16px;
+}
+
 *,
 *::after,
 *::before {
@@ -14,13 +48,13 @@
 }
 
 html {
-  font-size: 16px;
-  background-color: var(--secondary-bg-color);
+  font-size: var(--main-font-size);
+  background-color: var(--main-bg-color);
   color: var(--main-font-color);
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: "Circular Std Medium", sans-serif;
   margin: 0;
 }
 
@@ -30,6 +64,5 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: "Circular Std", sans-serif;
-  font-weight: 500;
+  font-family: "Circular Std Medium", sans-serif;
 }
