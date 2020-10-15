@@ -28,6 +28,12 @@
       url("./assets/fonts/CircularStd-Book.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+:root {
+  --main-bg-color: #181b2c;
+  --main-font-color: #ffffff57;
+  --main-font-size: 16px;
+}
+
 *,
 *::after,
 *::before {
@@ -35,9 +41,9 @@
 }
 
 html {
-  font-size: 16px;
-  background-color: #181b2c;
-  color: white;
+  font-size: var(--main-font-size);
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
 }
 
 body {
